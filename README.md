@@ -1,14 +1,15 @@
 # KYT-Mock-API
 
-Mock API for `UserApp` and `FrankieOne ` services
+Mock API for `UserApp` and `FrankieOne` services
 
 ## Requirement
 `NodeJS` install via https://nodejs.org/en/download/ \
 **OR**\
-`$brew install node`
+`brew install node`
 
 ## Usage
-Run `$node app.js` in the each service folder you want to run the mock API
+Run `npm install -i` in the each service folder to install dependencies\
+Run `node app.js` in the each service folder you want to run the mock API
  
 ### Note
 Default `PORT`:
