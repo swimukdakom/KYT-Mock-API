@@ -2,11 +2,15 @@
 
 Mock API for `UserApp` and `FrankieOne ` services
 
-Requirement:\
+**Requirement**:\
 `NodeJS` install via https://nodejs.org/en/download/ \
-OR\
+**OR**\
 `$brew install node`
 
-Usage:\
-Run `$node app.js` in the each service folder you want to spin the mock API
+## Usage
+Run `$node app.js` in the each service folder you want to run the mock API
  
+### Note
+Default `PORT`:
+  - UserApp - `3031`
+  - FrankieOne - `3032`
