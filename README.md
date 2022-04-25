@@ -1,6 +1,6 @@
 # KYT-Mock-API
 
-Mock API for `UserApp` and `FrankieOne` services
+Mock API for `UserApp`, `FrankieOne` and `Notabene` services
 
 ## Requirement
 `NodeJS` install via https://nodejs.org/en/download/ \
@@ -15,3 +15,4 @@ Run `node app.js` in the each service folder you want to run the mock API
 Default `PORT`:
   - UserApp - `3031`
   - FrankieOne - `3032`
+  - Notabene - `3033`
