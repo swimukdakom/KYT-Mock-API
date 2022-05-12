@@ -5,7 +5,7 @@ const axios = require('axios');
 async function callAPI() {
     const time = 10
     try {
-        if (Math.floor(Math.random() * 2) === 1) {
+        if (Math.floor(Math.random() * 4) === 1) {
             // console.log("LOGIN");
             var times = Math.floor(Math.random() * time)
             for (let index = 0; index < times; index++) {
@@ -23,27 +23,24 @@ async function callAPI() {
             var times = Math.floor(Math.random() * time)
             for (let index = 0; index < times; index++) {
                 var body = {
-                            "id": 12345,
-                            "amount": "120.0",
-                            "product_type": "FIAT",
-                            "device_session": "test_risk_token",
-                            "inserted_at": "2021-02-10 07:57:00.611767",
-                            "product_id": "usd.global",
+                            "id": "292747",
+                            "amount": 0.8400400001,
+                            "product_type": "crypto",
+                            "device_session": "",
+                            "inserted_at": "2022-02-17T05:04:42.506377Z",
+                            "product_id": "xlm.th",
                             "details": {
-                                "type": "tha_direct_credit_bank_account",
-                                "bank_code": "017",
-                                "bank_name": "CITIBANK, N.A.",
-                                "reference": "a7f58393-438b-4a0d-b848-6b043b993d6b",
-                                "bank_name_th": "ธ. ซิตี้แบงก์",
-                                "account_number": "123456789012",
-                                "bank_account_id": "01FRNJ9JXTSZG8A4CDEMPS22XP",
-                                "account_holder_name": "CITIBANK",
-                                "transaction_initiation_number": "xxx"
+                                "type": "crypto",
+                                "beneficiary_name": "James",
+                                "is_sending_to_myself": false,
+                                "status": "confirmed",
+                                "transfer_address": "GCDBX7GTQWJFTAJCJUGV4KXJZE6Q527YRLW75GYDJ2ODSVBOXCS4W7VS?memoId=12393",
+                                "tx_id": "0x3f5CE5FBFe3E9af3971dD833D26bA9b5C936f0bE"
                             },
-                            "user_id": "01EGMHEA4GTTBPNJEJ35JAWPKM",
+                            "user_id": "01FGKD0AW5CY2YWVA826887HT9",
                             "transaction_type": "withdraw",
-                            "fee_amount": "10.0",
-                            "received_amount": "110.0",
+                            "fee_amount": 3,
+                            "received_amount": 13.844069,
                             "state": "fully_processed"
                             }
                 var res = await axios.post('http://localhost:9000/api/v1/transaction', body)
