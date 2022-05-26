@@ -21,7 +21,7 @@ app.get(`/user/:g_user_id`, async (req, res) => {
       referral_code: 'bRrfIvW13g',
       signup_hostname: 'staging.zipmex.co.th',
       signup_platform: 'web',
-      signup_instance: 'tha',
+      signup_instance: 'sg',
       terms_accepted: false,
       updated_at: '2021-02-24T05:54:32.855638Z',
       user_id: '01EGMHEA4GTTBPNJEJ35JAWPKM',
@@ -40,7 +40,7 @@ app.get(`/user/:g_user_id`, async (req, res) => {
         console.log(error);
       });
     console.log("/user called [USER-APP]");
-    res.send(responseUserApp)
+    res.send(responseLocal)
   }
 })
 
@@ -108,7 +108,7 @@ app.get('/personal-info', async (req, res) => {
         console.log(error);
       });
     console.log("/txn called [USER-APP]");
-    res.send(responseUserApp)
+    res.send(responseLocal)
   }
 
 

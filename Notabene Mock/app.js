@@ -164,6 +164,7 @@ app.post(`/tx/create`, async (req, res) => {
     updatedBy: "did:ethr:0xb9ff072d5788b6854cc18c347db15c80a5fd424e"
   }
   console.log("[Notabene] /tx/create called"); 
+  await sleep(5) // Sleep 5 seconds
   res.send(responseLocal)
 })
 
