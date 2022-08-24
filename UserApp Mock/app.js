@@ -114,6 +114,35 @@ app.get('/personal-info', async (req, res) => {
 
 })
 
+app.get('/applicant', async (req, res) => {
+
+  if (server == "local") {
+    var responseLocal = {
+      actions_required: [],
+      id: "4b13cb66-41f1-46e5-9d7f-785ebcb1dde4",
+      inserted_at: "2022-08-23T07:53:26.173146Z",
+      level_increase_status: "pass",
+      status_reason: "",
+      updated_at: "2022-08-23T07:54:01.321421Z",
+      user_id: "01G1N0G9MTHS8EYXV002AXB7YT"
+    }
+    console.log("/applicant called [LOCAL]");
+    res.send(responseLocal)
+  } else {
+    var p_user_id = req.query.user_id
+    var responseUserApp = await axios.get(`https://user-app.zipmex.dev/applicant?user_id=${p_user_id}`)
+      .then(response => {
+        console.log(response.data);
+        return response.data
+      })
+      .catch(error => {
+        console.log(error);
+      });
+    console.log("/applicant called [USER-APP]");
+    res.send(responseLocal)
+  }
+})
+
 app.listen(port, () => {
   console.log(`UserApp Dummy API app listening at http://localhost:${port}`)
 })
